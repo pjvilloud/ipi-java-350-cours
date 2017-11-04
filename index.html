@@ -1,0 +1,895 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>IPI - Cours de qualité logicielle - groupe Chefs de projet</title>
+    
+    <meta name="description" content="" />
+    <meta name="author" content="Pierre-Julien VILLOUD" />
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/idea.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="my-navbar">
+  <a class="navbar-brand" href="index.html">
+    <img src="img/ipi.jpg" width="30" height="30" alt=""> Cours Qualité logicielle
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav nav-pills mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#introduction">
+          Introduction
+        </a>
+        
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownQuality" href="#quality" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          La qualité logicielle
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownQuality">
+          <a class="dropdown-item" href="#quality-quoi">Qu'est-ce que c'est ?</a>
+          <a class="dropdown-item" href="#quality-idees">Les idées reçues</a>
+          <a class="dropdown-item" href="#quality-methodo">Les méthodologies de développement</a>
+          <a class="dropdown-item" href="#quality-iteratif">Le développement itératif</a>
+          <a class="dropdown-item" href="#quality-outils">Les outils et pratiques indispensables</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownClient" href="#fiabilite" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Fiabilité
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownClient">
+          <a class="dropdown-item" href="#fiabilite-unit">Tests unitaire</a>
+          <a class="dropdown-item" href="#fiabilite-integration">Tests d'intégration</a>
+          <a class="dropdown-item" href="#fiabilite-metriques">Métriques</a>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownCapacite" href="#capacite" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Capacité fonctionnelle
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownCapacite">
+          <a class="dropdown-item" href="#capacite-acceptation">Tests d'acceptation</a>
+          <a class="dropdown-item" href="#capacite-interface">Tests d'interface</a>
+          <a class="dropdown-item" href="#capacite-manuels">Tests manuels</a>
+          <a class="dropdown-item" href="#capacite-metriques">Métriques</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownperformances" href="#performances" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Performances
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownperformances">
+          <a class="dropdown-item" href="#performances-charge">Tests de charge</a>
+          <a class="dropdown-item" href="#performances-metriques">Métriques</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMaintenabilite" href="#maintenabilite" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Maintenabilité
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMaintenabilite">
+          <a class="dropdown-item" href="#maintenabilite-journalisation">Journalisation</a>
+          <a class="dropdown-item" href="#maintenabilite-documentation">Documentation</a>
+          <a class="dropdown-item" href="#maintenabilite-dev">Développements spécifiques</a>
+          <a class="dropdown-item" href="#maintenabilite-metriques">Métriques</a>
+        </div>
+      </li>
+    </ul>
+    <span class="navbar-text">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a class="btn btn-primary" href="https://github.com/pjvilloud/ipi-java-220-ex" target="_blank"><i class="fa fa-icon fa-gamepad"></i></a>
+            &nbsp;
+            <a class="btn btn-primary" href="mailto:pjvilloud@protonmail.com"><i class="fa fa-icon fa-envelope"></i></a>
+            &nbsp;
+            <a class="btn btn-primary" href="https://github.com/pjvilloud" target="_blank"><i class="fa fa-icon fa-github"></i></a>
+            &nbsp;
+            <a class="btn btn-primary" href="https://linkedin.com/pjvilloud" target="_blank"><i class="fa fa-icon fa-linkedin"></i></a>&nbsp;
+            <a class="btn btn-primary" href="#" id="numSlide">1</a>
+        </div>
+    </span>
+  </div>
+</nav>
+<div class="progress">
+  <div id="progress" class="progress-bar" style="width: 0%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="container-fluid" id="impress">
+
+    <div id="accueil" class="step slide" data-nb="1" data-rel-x="0" data-y=0>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container text-center">
+            <h1 class="display-3">Bienvenue !</h1>
+            <p class="lead">
+                <h2>Pierre-Julien VILLOUD</h2>
+                <div class="big-top-margin">
+                    <img src="img/pjvilloud.jpg" class="img-bienvenue rounded mx-auto d-block" alt="Pierre-Julien VILLOUD">
+                </div>
+                <div class="big-top-margin">
+                    <h3><i class="fa fa-icon fa-envelope-square"></i>&nbsp;<a href="mailto:pjvilloud@protonmail.com">pjvilloud@protonmail.com</a></h3>
+                    <h3><i class="fa fa-icon fa-github-square"></i>&nbsp;<a href="https://github.com/pjvilloud" target="_blank">https://github.com/pjvilloud</a></h3>
+                    <h3><i class="fa fa-icon fa-linkedin-square"></i>&nbsp;<a href="https://linkedin.com/pjvilloud" target="_blank">https://linkedin.com/pjvilloud</a></h3>
+                    <h3><i class="fa fa-icon fa-globe"></i>&nbsp;<a href="http://pjvilloud.github.io" target="_blank">http://pjvilloud.github.io</a></h3>
+                </div>
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div id="introduction" class="step slide" data-nb="2" data-x="0" data-y="1100">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Introduction</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java"></code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="quality" class="step slide" data-nb="3" data-x="0" data-y="2200">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">La qualité logicielle</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une <strong>crise du logiciel</strong> est survenue dans les années 60-70.
+            </div>
+          </div>
+          <div class="container-fluid small-font">
+            <div class="row">
+              <div class="col-sm-8">
+                <img src="img/Software_Treeswing-1024x773.jpg" alt="">
+              </div>
+              <div class="col-sm-4">
+                <ul class="list-group big-top-margin">
+                  <li class="list-group-item">Des délais de livraison non tenus</li>
+                  <li class="list-group-item">Des dépassements de 50% à 70% des coûts prévisionnels</li>
+                  <li class="list-group-item">Des anomalies techniques</li>
+                  <li class="list-group-item">Des décalages avec les besoins du clients</li>
+                  <li class="list-group-item">Des difficultés à réaliser des évolutions</li>
+                  <li class="list-group-item">Des difficultés à réutiliser le logiciel dans d'autres contextes de développement</li>
+                  <li class="list-group-item">...</li>
+                </ul>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="quality-quoi" class="step slide" data-nb="4" data-rel-x="2000" data-y="2200">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Qu'est-ce que c'est ?</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;La <strong>qualité logicielle</strong> regroupe tous les indicateurs et techniques permettant d'évaluer et d'améliorer la qualité d'un logiciel ou des processus.
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <table class="table table-striped small-font">
+              <tbody>
+                <tr>
+                  <td class="text-center" rowspan="6" style="vertical-align: middle;">Qualité du produit</td>
+                  <td>Fiabilité</td>
+                </tr>
+                <tr>
+                  <td>Capacité fonctionnelle</td>
+                </tr>
+                <tr>
+                  <td>Performances</td>
+                </tr>
+                <tr>
+                  <td>Maintenabilité</td>
+                </tr>
+                <tr>
+                  <td>Facilité d'utilisation</td>
+                </tr>
+                <tr>
+                  <td>Portabilité</td>
+                </tr>
+                <tr>
+                  <td class="text-center" rowspan="6" style="vertical-align: middle;">Qualité des processus</td>
+                  <td>Respect des coûts et délais</td>
+                </tr>
+                <tr>
+                  <td>Evaluation de la qualité</td>
+                </tr>
+                <tr>
+                  <td>Temps de montée en compétence</td>
+                </tr>
+                <tr>
+                  <td>Exploitabilité</td>
+                </tr>
+                <tr>
+                  <td>Fiabilisation des livraisons</td>
+                </tr>
+                <tr>
+                  <td>Gestion des versions et correctifs</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="quality-idees" class="step slide" data-nb="5" data-rel-x="2000" data-y="2200">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les idées reçues</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;La qualité logicielle véhicule un certain nombre d'idées reçues...
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <ul class="list-group">
+              <li class="list-group-item">Tester coûte cher !</li>
+              <li class="list-group-item">Tester est une perte de temps !</li>
+              <li class="list-group-item">Si ça ne marche pas, soit c'est le client qui s'est mal exprimé, soit c'est l'utilisateur qui ne sait pas se servir du logiciel !</li>
+              <li class="list-group-item">Une fois livré, les problèmes ne sont plus de ma responsabilité...</li>
+              <li class="list-group-item">On ne peut tester un logiciel que lorsqu'il est codé !</li>
+              <li class="list-group-item">Ce sont les testeurs qui doivent tester !</li>
+              <li class="list-group-item">Les tests doivent être automatiques !</li>
+              <li class="list-group-item">Plus il y a de tests mieux c'est !</li>
+              <li class="list-group-item">Tester permet de trouver tous les bugs !</li>
+              <li class="list-group-item">Si tous mes tests passent, mon logiciel est de qualité !</li>
+            </ul>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Vous en connaissez d'autres ?
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="quality-methodo" class="step slide" data-nb="6" data-rel-x="2000" data-y="2200">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les méthodologies de développement</h1>
+          <div class="container small-font big-img">
+            <img src="img/software-development-methods-explained-with-cars-toggl-infographic-02.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="quality-iteratif" class="step slide" data-nb="7" data-rel-x="2000" data-y="2200">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Le développement itératif</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Peu importe la méthode choisie (enfin presque...), l'important est d'adopter une approche <strong>itérative</strong> dans les phases de développement.
+            </div>
+          </div>
+          <div class="container small-font">
+            <img src="img/iteratif.png" alt="">
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Le but étant d'avoir un produit fonctionnel (même partiel) à montrer au client régulièrement et ainsi éviter l'effet tunnel.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="quality-outils" class="step slide" data-nb="8" data-rel-x="2000" data-y="2200">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les outils et pratiques indispensables</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Liste forcément subjective et discutable...
+            </div>
+          </div>
+          <div class="container small-font little-top-margin">
+            <div class="row">
+              <div class="col-lg-6">
+                <h1 class="display-4">Outils</h1>
+                <ul class="list-group">
+                  <li class="list-group-item" data-toggle="popover" data-offset="-40" data-trigger="hover click" data-placement="left" data-html="true" data-content="<img src='img/Git-Logo-2Color.png' height='100px'>">Gestionnaire de code source</li>
+                  <li class="list-group-item" data-toggle="popover" data-trigger="hover click" data-placement="left" data-html="true" data-content="<img src='img/jenkins.png' height='50px'>">Plateforme d'intégration continue</li>
+                  <li class="list-group-item" data-toggle="popover" data-trigger="hover click" data-placement="left" data-html="true" data-content="<img src='img/sonarqube_logo_720.png' height='50px'>">Plateforme d'évaluation de la qualité</li>
+                  <li class="list-group-item" data-toggle="popover" data-trigger="hover click" data-placement="left" data-html="true" data-content="<img src='img/insanekanban.jpg' height='265px'>" data-template="<div class='popover medium-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>">Outils de plannification des itérations</li>
+                  <li class="list-group-item" data-toggle="popover" data-trigger="hover click" data-placement="left" data-html="true" data-content="<img src='img/jira.png' height='50px'>">Plateforme de gestion des anomalies</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <h1 class="display-4">Pratiques</h1>
+                <ul class="list-group">
+                  <li class="list-group-item" data-toggle="popover" data-trigger="hover click" data-placement="right" data-html="true" data-content="<img src='img/pair.jpg' height='225px'>" data-template="<div class='popover mediumm-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>">Pair programming</li>
+                  <li class="list-group-item" data-toggle="popover" data-trigger="hover click" data-placement="right" data-html="true" data-content="<img src='img/code_reviews.jpg' width='335px'>" data-template="<div class='popover mediumm-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>">Revues de code</li>
+                  <li class="list-group-item" data-toggle="popover" data-trigger="hover click" data-placement="right" data-html="true" data-content="<img src='img/retrospective.jpg' width='335px'>" data-template="<div class='popover mediumm-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>">Rétrospectives</li>
+                  <li class="list-group-item" data-toggle="popover" data-trigger="hover click" data-placement="right" data-html="true" data-content="<img src='img/poker.jpg' width='335px'>" data-template="<div class='popover mediumm-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>">Implication des développeurs dans les chiffrages</li>
+                  <li class="list-group-item" data-toggle="popover" data-trigger="hover click" data-placement="right" data-html="true" data-content="<img src='img/client.jpg' width='335px'>" data-template="<div class='popover mediumm-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>">Implication du client</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Vous en avez d'autres ?
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite" class="step slide" data-nb="9" data-x="0" data-y="3300">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Fiabilité</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;La <strong>fiabilité</strong> d'un code et sa capacité à s'exécuter correctement dans les cas nominaux comme dans les cas aux limites, et à produire le résultat escompté.
+            </div>
+          </div>
+          <div class="container small-font">
+            <ul class="list-group">
+              <li class="list-group-item">Tests unitaires</li>
+              <li class="list-group-item">Tests d'intégration</li>
+              <li class="list-group-item">Métriques</li>
+            </ul>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;C'est le niveau le plus simple à mettre en place.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite-unit" class="step slide" data-nb="10" data-rel-x="2000" data-y="3300">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les tests unitaires</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les <strong>tests unitaires</strong> ont pour but de tester un <em>partie</em> ou une <em>portion</em> de code de manière unitaire et indépendante.
+            </div>
+          </div>
+          <div class="container small-font">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="img/Test-First.jpg" alt="" width="450px" data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true" data-content="<img src='img/junit.png' width='220px'><img src='img/testng.png' width='220px'>">
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-success">Un bon test unitaire doit être...</li>
+                  <li class="list-group-item">unitaire</li>
+                  <li class="list-group-item" data-toggle="popover" data-trigger="hover click" data-placement="right" data-html="true" data-content="<img src='img/mockito.png' width='200px'>">indépendant</li>
+                  <li class="list-group-item" data-toggle="popover" data-trigger="hover click" data-placement="right" data-html="true" data-content="<img src='img/kiss.jpg' width='200px'>">simple</li>
+                  <li class="list-group-item">reproductible</li>
+                  <li class="list-group-item">rapide</li>
+                  <li class="list-group-item" data-toggle="popover" data-trigger="hover click" data-placement="right" data-html="true" data-content="<img src='img/given.jpg' width='200px'>">clair</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Idéalement, ils sont codés <strong>avant</strong> l'implémentation de la fonctionnalité, on appelle cela le <strong>TDD</strong> pour <em>Test Driven Development</em>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite-integration" class="step slide" data-nb="11" data-rel-x="2000" data-y="3300">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les tests d'intégration</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les <strong>tests d'intégration</strong> ont pour but de tester le bon fonctionnement de <strong>l'assemblage</strong> de modules (précédemment testés de manière unitaire) en un composant de plus haut niveau.
+            </div>
+          </div>
+          <div class="container small-font big-top-margin">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="img/integration.gif" alt="">
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-success">Un bon test d'intégration doit être...</li>
+                  <li class="list-group-item">indépendant</li>
+                  <li class="list-group-item">rapide</li>
+                  <li class="list-group-item">pertinent</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On ne doit pas re-tester les résultats produits par les sous-modules mais bien leur interaction !
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite-metriques" class="step slide" data-nb="12" data-rel-x="2000" data-y="3300">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Métriques</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les métriques permettant de s'assurer de la fiabilité d'un logiciel sont les suivantes (liste non exhaustive) : 
+            </div>
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Résultats des tests unitaires et d'intégration (% de tests OK)</li>
+              <li class="list-group-item">Couverture de code (%)</li>
+              <li class="list-group-item">Couverture de code avec mutation (%)</li>
+              <li class="list-group-item">Complexité (application, classe, méthode)</li>
+              <li class="list-group-item">Lignes de code en commentaire</li>
+              
+            </ul>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-danger small-font " role="alert">
+                <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp; Attention, viser systématiquement 100% de couverture de code n'est pas efficient ! Il est également nécessaire de bien paramétrer son gestionnaire de qualité afin d'éviter les <em>faux positifs</em>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="capacite" class="step slide" data-nb="13" data-x="0" data-y="4400">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Capacité fonctionnelle</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;La <strong>capacité fonctionnelle</strong> d'un logiciel est le degré de conformité du logiciel aux besoins du client.
+            </div>
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Tests d'acceptation</li>
+              <li class="list-group-item">Tests d'interface</li>
+              <li class="list-group-item">Tests manuels</li>
+              <li class="list-group-item">Métriques</li>
+            </ul>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est important de connaître où est la <strong>valeur</strong> dans le logiciel pour le client, et dans la mesure du possible, commencer le développement des fonctionnalités ayant le plus de valeur.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="capacite-acceptation" class="step slide" data-nb="14" data-rel-x="2000" data-y="4400">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les tests d'acceptation</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les <strong>tests d'acceptation</strong> vérifient la conformité fonctionnelle de l'application, c'est-à-dire sa capacité à produire les résultats décris dans les spécifications en fonction de scénarios fonctionnels. 
+            </div>
+          </div>
+          <div class="container small-font little-top-margin">
+            <div class="row">
+              <div class="col-lg-6 big-top-margin">
+                <img src="img/tdd_atdd.png" alt="" width="450" data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true" data-content="<img src='img/cucumber.svg' width='340px'>" data-template="<div class='popover medium-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>">
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-success">Un bon test d'acceptation doit être...</li>
+                  <li class="list-group-item">non technique</li>
+                  <li class="list-group-item">uniquement fonctionnel</li>
+                  <li class="list-group-item">non équivoque</li>
+                  <li class="list-group-item">écrit par le client</li>
+                  <li class="list-group-item">écrit avant le développement</li>
+                  <li class="list-group-item">automatisé</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les tests d'acceptation peuvent être considérés comme des spécifications. Lorsqu'ils sont fournis avant le début des développement, on parle d'<strong>ATDD</strong> ou <em>Acceptance Test Driven Development</em>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="capacite-interface" class="step slide" data-nb="15" data-rel-x="2000" data-y="4400">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les tests d'interface</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les <strong>tests d'interface</strong> permettent d'assurer le bon fonctionnement d'une interface graphique en simulant un comportement utilisateur. Du fait du caractère évolutif d'une interface graphique, ces tests sont souvent réalisés à la fin de développement.
+            </div>
+          </div>
+          <div class="container small-font little-top-margin">
+            <div class="row">
+              <div class="col-lg-6 little-top-margin">
+                <img src="img/iutest.jpg" alt="" width="400" data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true" data-content="<img src='img/selenium.png'>">
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-group big-top-margin">
+                  <li class="list-group-item list-group-item-success">Un bon test d'interface doit être...</li>
+                  <li class="list-group-item">automatisé</li>
+                  <li class="list-group-item">déployé sur plusieurs plateformes</li>
+                  <li class="list-group-item">indispensable</li>
+                  <li class="list-group-item">... Y a-t-il vraiment de bons tests d'interface ?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les tests d'interface sont souvent difficiles à développer, automatiser et maintenir. Ils doivent donc être mis en place que pour les éléments non testables autrement (positionnement d'éléments, affichage de message d'erreur, déclenchement des actions avec les éléments de l'interface...).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="capacite-manuel" class="step slide" data-nb="16" data-rel-x="2000" data-y="4400">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les tests manuels</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les <strong>tests manuels</strong> ne doivent pas pour autant être oubliés. Ils sont parfois plus pertinents que des tests d'interface difficilement maintenables car plus <em>intelligents</em>.
+            </div>
+          </div>
+          <div class="container small-font little-top-margin">
+            <div class="row">
+              <div class="col-lg-6 little-top-margin">
+                <img src="img/automation.png" alt="" width="400">
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-group big-top-margin">
+                  <li class="list-group-item list-group-item-success">Un bon test manuel doit être...</li>
+                  <li class="list-group-item"><s>automatisé</s></li>
+                  <li class="list-group-item">scénarisé</li>
+                  <li class="list-group-item">pas trop long...</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les tests manuels sont évidemment coûteux mais peuvent avoir une vraie valeur ajoutée dans certains projets. Les scénarios testés sont généralement ceux déroulés lors de la phase de recette.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="capacite-metriques" class="step slide" data-nb="17" data-rel-x="2000" data-y="4400">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Métriques</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il n'y a pas vraiment de métriques permettant d'assurer la capacité fonctionnelle. On peut néanmoins citer : 
+            </div>
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Résultats des tests d'acceptation (% de tests OK)</li>
+              <li class="list-group-item">Résultats des tests d'interface (% de tests OK)</li>
+              <li class="list-group-item">Résultats des tests manuels (% de tests OK)</li>
+              <li class="list-group-item" data-offset="-80px" data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-content="<img src='img/grumpycat.jpg' width='340px'>">Satisfaction client (largeur de sourire ?)</li>
+            </ul>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp; Il est très difficile d'impliquer le client dans cette démarche car cela engage sa responsabilité et implique qu'il connaît exactement son besoin...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="performances" class="step slide" data-nb="18" data-x="0" data-y="5500">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Performances</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les performances d'une application dépendent de son type. On ne mesure pas de la même manière les performances d'un site web que d'un batch d'intégration de fichier par exemple.
+            </div>
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Tests de charge</li>
+              <li class="list-group-item">Métriques</li>
+            </ul>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font big-top-margin" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Négliger les performances d'une application peut parfois coûter très cher lorsqu'il faut les améliorer une fois l'application développée et livrée...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="performances-charges" class="step slide" data-nb="19" data-rel-x="2000" data-y="5500">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les tests de charge</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est important de commencer les tests de charge dès le début des développements car généralement, c'est au fur et à mesure des développements que les performances se déteriorent.
+            </div>
+          </div>
+          <div class="container small-font">
+            <div class="row big-top-margin">
+              <div class="col-lg-6 little-top-margin">
+                <img src="img/charge.gif" alt="" data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="left" data-html="true" data-content="<img src='img/jmeter.svg' width='250'>">
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-primary">Un bon test de charge doit être...</li>
+                  <li class="list-group-item">pertinent</li>
+                  <li class="list-group-item">surveillé</li>
+                  <li class="list-group-item">complet</li>
+                  <li class="list-group-item">réaliste</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Le bon équilibre doit être trouvé car lorsqu'on améliore les performances d'un côté, c'est souvent au détriment d'un autre module.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="performances-metriques" class="step slide" data-nb="20" data-rel-x="2000" data-y="5500">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Métriques</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les métriques permettant de s'assurer des performances d'un logiciel sont les suivantes (liste non exhaustive) : 
+            </div>
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Web : Temps de chargement des pages (durée)</li>
+              <li class="list-group-item">Web : Temps des recherches (durée)</li>
+              <li class="list-group-item">Batch : Nombre de lectures/écritures (nombre par seconde)</li>
+              <li class="list-group-item">Application : Temps de chargement</li>
+              <li class="list-group-item">Temps d'exécution des tests</li>
+              <li class="list-group-item">Evolution des tests de charge</li>
+            </ul>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il faut arriver à identifier les points faibles de l'application (souvent la base de données mais pas que...) car parfois la solution n'est pas logicielle (augmentation mémoire...).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="maintenabilite" class="step slide" data-nb="21" data-x="0" data-y="6600">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Maintenabilité</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;la <strong>maintenabilité</strong> correspond à la capacité d'une application livrée à être maintenue (maintenance corrective et évolutive) en maîtrisant les coûts, délais et son intégrité.
+            </div>
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Journalisation</li>
+              <li class="list-group-item">Documentation</li>
+              <li class="list-group-item">Développements spécifiques</li>
+              <li class="list-group-item">Métriques</li>
+            </ul>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font big-top-margin" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On s'occupe souvent de la maintenabilité à la fin de projet, lorsque la phase d'exploitation approche. C'est en général moins coûteux de garder cet élément à l'esprit au fur et à mesure des développements.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="maintenabilite-journalisation" class="step slide" data-nb="22" data-rel-x="2000" data-y="6600">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Journalisation</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;La <strong>journalisation</strong> permet de consigner les événements survenus dans l'application. Ces événements sont généralement consignés dans des fichiers (avec des rotations) ou dans une base de données.
+            </div>
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item" data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-content="<span class='text-info'>INFO</span>"><span class="text-primary">Actions utilisateur (CRUD)</span></li>
+              <li class="list-group-item" data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-content="<span class='text-info'>INFO</span>"><span class="text-primary">Compte-rendu de traitements automatiques</span></li>
+              <li class="list-group-item" data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-content="<span class='text-info'>INFO</span>"><span class="text-primary">Informations sur le client (OS, navigateur...)</span></li>
+              <li class="list-group-item" data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-content="<span class='text-warning'>WARNING</span>"><span class="text-warning">Seuils techniques ou fonctionnels atteints</span></li>
+              <li class="list-group-item" data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-content="<span class='text-danger'>ERROR/SEVERE</span>"><span class="text-danger">Erreurs techniques ou fonctionnelles</span></li>
+            </ul>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font" role="alert" data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="top" data-html="true" data-content="<img src='img/elastic.png' height='70px'><img src='img/logstash.png' height='70px'><img src='img/kibana.svg' height='70px'>" data-template="<div class='popover large-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp; Il existe des outils pour exploiter de manière efficace ces logs qui peuvent être difficile à consulter.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="maintenabilite-documentation" class="step slide" data-nb="23" data-rel-x="2000" data-y="6600">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Documentation</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;La documentation du code est très importante pour assurer la lisibilité et la maintenabilité d'une application
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java small-font"><span data-toggle="popover" data-trigger="hover" data-placement="right" title="Commentaire sur plusieurs lignes" data-content="Les commentaires n'apparaissent pas dans le programme exécutable.
+ Ils n'ont donc pas d'influence sur la taille ou les performances du programme.<br>Les commentaires /* */ ne sont pas imbricables. Pour mettre en commentaire un bloc de code, le mettre entre /* */ est insuffisant s'il contient lui même un commentaire /* */" data-html="true">/*
+ *  Première classe d'exemple
+ *  pour le cours de test
+ */</span>
+public class HelloWorld
+{
+    <span data-toggle="popover" data-trigger="hover" data-placement="right" title="Javadoc" data-content="Commentaires utilisés pour la génération de la documentation" data-html="true">/**
+     * Point d'entrée du programme
+     * 
+     * @param args Tableau des arguments passés au programme
+    */</span>
+    public static void main(String[] args)
+    {
+        <span data-toggle="popover" data-trigger="hover" data-placement="right" title="Commentaire sur une ligne" data-content="Commentaire pour donner des informations sur la ou les instructions suivantes." data-html="true">//Affiche Hello World dans la console</span>
+        System.out.println("Hello World");
+    }
+}</code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Cela facilite la lecture du code pour les futurs développeurs qui modifieront le code.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="maintenabilite-dev" class="step slide" data-nb="24" data-rel-x="2000" data-y="6600">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Développements spécifiques</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est parfois utile de développer spécifiquement des modules pour faciliter la maintenabilité et l'exploitabilité d'une application.
+            </div>
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Interface de monitoring de traitements</li>
+              <li class="list-group-item">Pages web d'administration (CRUD)</li>
+              <li class="list-group-item">Suivi des interventions</li>
+              <li class="list-group-item">Suivi des montées de version</li>
+              <li class="list-group-item">Automatisation de tâches d'exploitation</li>
+              <li class="list-group-item">...</li>
+            </ul>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ce genre de développement pouvant être coûteux, il faut s'assurer de leur ROI.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="maintenabilite-evolutions" class="step slide" data-nb="25" data-rel-x="2000" data-y="6600">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Evolutivité</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java"></code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="maintenabilite-metriques" class="step slide" data-nb="26" data-rel-x="2000" data-y="6600">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Métriques</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les métriques permettant de s'assurer de la maintenabilité d'un logiciel sont les suivantes (liste non exhaustive) : 
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <ul class="list-group">
+              <li class="list-group-item">Nombre de lignes de commentaires et % par rapport au code</li>
+              <li class="list-group-item">Code smells (nombre)</li>
+              <li class="list-group-item">Dette technique (durée)</li>
+              <li class="list-group-item">Code dupliqué (% et nombre de lignes)</li>
+            </ul>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ces métriques sont à surveiller tout au long de la phase de développement.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script src="js/impress.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/highlight.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/script.js"></script>
+
