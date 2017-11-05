@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>IPI - Cours de qualité logicielle - groupe Chefs de projet</title>
+    <title>IPI - Cours de qualité logicielle - Java 350</title>
     
     <meta name="description" content="" />
     <meta name="author" content="Pierre-Julien VILLOUD" />
@@ -31,7 +31,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="my-navbar">
   <a class="navbar-brand" href="index.html">
-    <img src="img/ipi.jpg" width="30" height="30" alt=""> Cours Qualité logicielle
+    <img src="img/ipi.jpg" width="30" height="30" alt=""> Cours Java 350
   </a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,6 +96,7 @@
           <a class="dropdown-item" href="#maintenabilite-journalisation">Journalisation</a>
           <a class="dropdown-item" href="#maintenabilite-documentation">Documentation</a>
           <a class="dropdown-item" href="#maintenabilite-dev">Développements spécifiques</a>
+          <a class="dropdown-item" href="#maintenabilite-livraison">Livraisons</a>
           <a class="dropdown-item" href="#maintenabilite-metriques">Métriques</a>
         </div>
       </li>
@@ -145,15 +146,20 @@
           <h1 class="display-3">Introduction</h1>
           <div class="container-fluid">
             <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Quelques informations sur le déroulé du cours.
             </div>
           </div>
-          <div class="container small-font text-left">
-            <pre><code class="java"></code></pre>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Présentation et tour de table</li>
+              <li class="list-group-item">Fonctionnement du cours</li>
+              <li class="list-group-item">Attentes vis-à-vis du cours</li>
+              <li class="list-group-item">Initialisation de l'environnement de travail</li>
+            </ul>
           </div>
-          <div class="container-fluid">
+          <div class="container-fluid big-top-margin">
             <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Le contenu pourra être ajusté en fonction de vos connaissances et de vos attentes
             </div>
           </div>
         </div>
@@ -179,7 +185,7 @@
                   <li class="list-group-item">Des délais de livraison non tenus</li>
                   <li class="list-group-item">Des dépassements de 50% à 70% des coûts prévisionnels</li>
                   <li class="list-group-item">Des anomalies techniques</li>
-                  <li class="list-group-item">Des décalages avec les besoins du clients</li>
+                  <li class="list-group-item">Des décalages avec les besoins du client</li>
                   <li class="list-group-item">Des difficultés à réaliser des évolutions</li>
                   <li class="list-group-item">Des difficultés à réutiliser le logiciel dans d'autres contextes de développement</li>
                   <li class="list-group-item">...</li>
@@ -363,14 +369,14 @@
                 <i class="fa fa-icon fa-info-circle"></i>&nbsp;La <strong>fiabilité</strong> d'un code et sa capacité à s'exécuter correctement dans les cas nominaux comme dans les cas aux limites, et à produire le résultat escompté.
             </div>
           </div>
-          <div class="container small-font">
+          <div class="container small-font big-top-margin">
             <ul class="list-group">
               <li class="list-group-item">Tests unitaires</li>
               <li class="list-group-item">Tests d'intégration</li>
               <li class="list-group-item">Métriques</li>
             </ul>
           </div>
-          <div class="container-fluid little-top-margin">
+          <div class="container-fluid big-top-margin">
             <div class="alert alert-primary small-font " role="alert">
                 <i class="fa fa-icon fa-info-circle"></i>&nbsp;C'est le niveau le plus simple à mettre en place.
             </div>
@@ -731,6 +737,7 @@
               <li class="list-group-item">Journalisation</li>
               <li class="list-group-item">Documentation</li>
               <li class="list-group-item">Développements spécifiques</li>
+              <li class="list-group-item">Livraisons</li>
               <li class="list-group-item">Métriques</li>
             </ul>
           </div>
@@ -808,7 +815,32 @@ public class HelloWorld
       </div>
     </div>
 
-    <div id="maintenabilite-dev" class="step slide" data-nb="24" data-rel-x="2000" data-y="6600">
+    <div id="maintenabilite-documentation-projet" class="step slide" data-nb="24" data-rel-x="2000" data-y="6600">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Documentation projet</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une documentation technique pour le projet est un bon moyen d'améliorer le temps de montée en compétences des nouveaux arrivants.
+            </div>
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item"><a target="_blank" href="http://www.mkdocs.org/">MkDocks</a></li>
+              <li class="list-group-item">Sharepoint</li>
+              <li class="list-group-item">Wiki</li>
+            </ul>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;C'est aussi un bon endroit pour regrouper les instructions de livraison, les caractéristiques des différents environnements...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="maintenabilite-dev" class="step slide" data-nb="25" data-rel-x="2000" data-y="6600">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Développements spécifiques</h1>
@@ -836,10 +868,10 @@ public class HelloWorld
       </div>
     </div>
 
-    <div id="maintenabilite-evolutions" class="step slide" data-nb="25" data-rel-x="2000" data-y="6600">
+    <div id="maintenabilite-livraison" class="step slide" data-nb="26" data-rel-x="2000" data-y="6600">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
-          <h1 class="display-3">Evolutivité</h1>
+          <h1 class="display-3">Livraisons</h1>
           <div class="container-fluid">
             <div class="alert alert-primary small-font" role="alert">
                 <i class="fa fa-icon fa-info-circle"></i>&nbsp;
@@ -857,7 +889,7 @@ public class HelloWorld
       </div>
     </div>
 
-    <div id="maintenabilite-metriques" class="step slide" data-nb="26" data-rel-x="2000" data-y="6600">
+    <div id="maintenabilite-metriques" class="step slide" data-nb="27" data-rel-x="2000" data-y="6600">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Métriques</h1>
