@@ -12,6 +12,7 @@
 
 
     <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-4-navbar.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/idea.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
@@ -40,70 +41,11 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="nav nav-pills mr-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link" href="#introduction">
-          Introduction
-        </a>
-        
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownQuality" href="#quality" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          La qualité logicielle
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownQuality">
-          <a class="dropdown-item" href="#quality-quoi">Qu'est-ce que c'est ?</a>
-          <a class="dropdown-item" href="#quality-idees">Les idées reçues</a>
-          <a class="dropdown-item" href="#quality-methodo">Les méthodologies de développement</a>
-          <a class="dropdown-item" href="#quality-iteratif">Le développement itératif</a>
-          <a class="dropdown-item" href="#quality-outils">Les outils et pratiques indispensables</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownClient" href="#fiabilite" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Fiabilité
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownClient">
-          <a class="dropdown-item" href="#fiabilite-unit">Tests unitaire</a>
-          <a class="dropdown-item" href="#fiabilite-integration">Tests d'intégration</a>
-          <a class="dropdown-item" href="#fiabilite-metriques">Métriques</a>
-        </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownCapacite" href="#capacite" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Capacité fonctionnelle
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownCapacite">
-          <a class="dropdown-item" href="#capacite-acceptation">Tests d'acceptation</a>
-          <a class="dropdown-item" href="#capacite-interface">Tests d'interface</a>
-          <a class="dropdown-item" href="#capacite-manuels">Tests manuels</a>
-          <a class="dropdown-item" href="#capacite-metriques">Métriques</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownperformances" href="#performances" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Performances
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownperformances">
-          <a class="dropdown-item" href="#performances-charge">Tests de charge</a>
-          <a class="dropdown-item" href="#performances-metriques">Métriques</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMaintenabilite" href="#maintenabilite" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Maintenabilité
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMaintenabilite">
-          <a class="dropdown-item" href="#maintenabilite-journalisation">Journalisation</a>
-          <a class="dropdown-item" href="#maintenabilite-documentation">Documentation</a>
-          <a class="dropdown-item" href="#maintenabilite-dev">Développements spécifiques</a>
-          <a class="dropdown-item" href="#maintenabilite-livraison">Livraisons</a>
-          <a class="dropdown-item" href="#maintenabilite-metriques">Métriques</a>
-        </div>
-      </li>
+      
     </ul>
     <span class="navbar-text">
         <div class="btn-group" role="group" aria-label="Basic example">
-            <a class="btn btn-primary" href="https://github.com/pjvilloud/ipi-java-220-ex" target="_blank"><i class="fa fa-icon fa-gamepad"></i></a>
+            <a class="btn btn-primary" href="https://github.com/pjvilloud/ipi-java-340-ex" target="_blank"><i class="fa fa-icon fa-gamepad"></i></a>
             &nbsp;
             <a class="btn btn-primary" href="mailto:pjvilloud@protonmail.com"><i class="fa fa-icon fa-envelope"></i></a>
             &nbsp;
@@ -120,7 +62,7 @@
 </div>
 <div class="container-fluid" id="impress">
 
-    <div id="accueil" class="step slide" data-nb="1" data-rel-x="0" data-y=0>
+    <div id="accueil" class="step slide" data-rel-x="0" data-y=0>
         <div class="jumbotron jumbotron-fluid">
           <div class="container text-center">
             <h1 class="display-3">Bienvenue !</h1>
@@ -139,34 +81,8 @@
           </div>
         </div>
     </div>
-
-    <div id="introduction" class="step slide" data-nb="2" data-x="0" data-y="1100">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-          <h1 class="display-3">Introduction</h1>
-          <div class="container-fluid">
-            <div class="alert alert-primary small-font" role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Quelques informations sur le déroulé du cours.
-            </div>
-          </div>
-          <div class="container small-font big-top-margin">
-            <ul class="list-group">
-              <li class="list-group-item">Présentation et tour de table</li>
-              <li class="list-group-item">Fonctionnement du cours</li>
-              <li class="list-group-item">Attentes vis-à-vis du cours</li>
-              <li class="list-group-item">Initialisation de l'environnement de travail</li>
-            </ul>
-          </div>
-          <div class="container-fluid big-top-margin">
-            <div class="alert alert-primary small-font " role="alert">
-                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Le contenu pourra être ajusté en fonction de vos connaissances et de vos attentes
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     
-    <div id="quality" class="step slide" data-nb="3" data-x="0" data-y="2200">
+    <div id="quality" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">La qualité logicielle</h1>
@@ -197,7 +113,7 @@
       </div>
     </div>
 
-    <div id="quality-quoi" class="step slide" data-nb="4" data-rel-x="2000" data-y="2200">
+    <div id="quality-quoi" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Qu'est-ce que c'est ?</h1>
@@ -254,7 +170,7 @@
       </div>
     </div>
 
-    <div id="quality-idees" class="step slide" data-nb="5" data-rel-x="2000" data-y="2200">
+    <div id="quality-idees" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Les idées reçues</h1>
@@ -286,7 +202,7 @@
       </div>
     </div>
 
-    <div id="quality-methodo" class="step slide" data-nb="6" data-rel-x="2000" data-y="2200">
+    <div id="quality-methodo" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Les méthodologies de développement</h1>
@@ -297,7 +213,7 @@
       </div>
     </div>
 
-    <div id="quality-iteratif" class="step slide" data-nb="7" data-rel-x="2000" data-y="2200">
+    <div id="quality-iteratif" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Le développement itératif</h1>
@@ -318,7 +234,7 @@
       </div>
     </div>
 
-    <div id="quality-outils" class="step slide" data-nb="8" data-rel-x="2000" data-y="2200">
+    <div id="tools" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Les outils et pratiques indispensables</h1>
@@ -360,7 +276,49 @@
       </div>
     </div>
 
-    <div id="fiabilite" class="step slide" data-nb="9" data-x="0" data-y="3300">
+    <div id="tools-continuous" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Intégration continue</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;<a href="https://jenkins.io/" target="_blank">Jenkins</a> est un serveur d'intégration continue très utilisé dans le monde java. Il requiert cependant d'être installé sur un serveur et la configuration n'est pas aisée. Il existe aussi <a href="http://travis-ci.org/" target="_blank">Travis</a> dont la configuration et l'interface sont plus pratiques, et l'intégration avec Github transparente.
+            </div>
+          </div>
+          <div class="container little-top-margin small-font">
+            <a href="https://travis-ci.org/pjvilloud/ipi-java-350-ex" target="_blank"><img src="img/travis350.png" alt=""></a>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font little-top-margin" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voir la documentation <a href="https://docs.travis-ci.com/user/languages/java/" target="_blank">ici</a> pour configurer un projet Java dans Travis
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tools-sonar" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Évaluation de la qualité</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;<a href="https://about.sonarcloud.io/" target="_blank">Sonar</a> est une plateforme d'évaluation de la qualité que l'on peut installer sur son serveur, ou utiliser en mode SaaS.
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <img src="img/sonar350.png" alt="" height="650">
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font little-top-margin" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Voir <a href="https://sonarcloud.io/dashboard?id=com.ipiecoles.java%3Ajava350" target="_blank">ici</a> pour un exemple de rapport.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite" class="step slide" data-x="0">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Fiabilité</h1>
@@ -385,7 +343,7 @@
       </div>
     </div>
 
-    <div id="fiabilite-unit" class="step slide" data-nb="10" data-rel-x="2000" data-y="3300">
+    <div id="fiabilite-unit" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Les tests unitaires</h1>
@@ -421,7 +379,323 @@
       </div>
     </div>
 
-    <div id="fiabilite-integration" class="step slide" data-nb="11" data-rel-x="2000" data-y="3300">
+    <div id="fiabilite-unit-junit" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">JUnit</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;<strong>JUnit</strong> est un framework java permettant de réaliser des tests unitaires.
+            </div>
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Classe et méthodes de test</li>
+              <li class="list-group-item">Vérifications</li>
+              <li class="list-group-item">Tests paramétrés</li>
+              <li class="list-group-item">Ressources de test</li>
+              <li class="list-group-item">Tests avec Spring</li>
+              <li class="list-group-item">Initialisation et Réinitialisation</li>
+              <li class="list-group-item">Mock</li>
+            </ul>
+          </div>
+          <div class="container-fluid big-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous allons utiliser JUnit 4, mais  sachez qu'il existe JUnit 5 (pas encore intégré à Spring) ainsi que TestNG qui possède des fonctionnalités un peu plus avancées que JUnit.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="fiabilite-unit-junit-classes" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Classe et méthodes de test</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les classes contenant les tests unitaires sont généralement placées dans le répertoire <code>src/test/java</code>. Ils sont nommés <code>NomClasseTest</code> ou <em>NomClasse</em> correspond à la classe testée et sont situées dans le même package.
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java">public class VehiculeTest {
+
+  @Test //dans org.junit.Test
+  public void testCheckBadImmatriculation(){
+      //Given = Initialisation des données d'entrée
+      String immatriculation = "XXXXXX";
+
+      //When = Exécution de la méthode à tester
+      Boolean immatOk = Vehicule.checkImmatriculation(immatriculation);
+
+      //Then = Vérifications de ce qu'a fait la méthode
+      Assertions.assertThat(immatOk).isFalse();
+}</code></pre>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On nomme généralement le nom de la méthode de test de manière à comprendre ce que vérifie le test. Exemple : <code>testCheckBadImmatriculation</code> ou <code>shouldBadImmatriculation</code>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div id="fiabilite-unit-junit-verifications" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Vérifications</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour vérifier le comportement de la méthode testée, on utilise des assertions. JUnit propose des assertions de base mais voyons les assertions proposées par <strong>AssertJ</strong> qui sont plus complètes et lisibles car sous la forme <code>assertThat(objectAVerifier).testAEffectuer()</code>.
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java">public class VehiculeTest {
+  @Test
+  public void testCheckBadImmatriculation(){
+      //Given, When
+      //Then (org.assertj.core.api.Assertions)
+      Assertions.assertThat(booleen).isFalse(); //isTrue
+      Assertions.assertThat(booleen).isNull(); //isNotNull
+      Assertions.assertThat(object).isEqualTo(otherObject); //isNotEqualTo
+      Assertions.assertThat(string).contains("test"); //doesNotContain
+      Assertions.assertThat(string).startsWith("test"); //endWith
+      Assertions.assertThat(string).isEmpty(); //isNotEmpty
+      Assertions.assertThat(number).isPositive(); //isNegative
+      Assertions.assertThat(number).isGreaterThan(5); //isLessThan,isGreaterThanOrEqualTo
+      Assertions.assertThat(list).hasSize(3);
+      ...
+}</code></pre>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour connaître toutes les méthodes disponibles, consulter la <a href="http://joel-costigliola.github.io/assertj/index.html">documentation</a> de AssertJ ou utiliser l'autocomplétion de votre IDE sur la variable à vérifier.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite-unit-junit-parametres" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Tests paramétrés</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Lorsque l'on veut utiliser plusieurs jeux de données pour un même test, on peut utiliser le <strong>paramétrage de test</strong>.
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java">@RunWith(value = Parameterized.class)//org.junit.runners.Parameterized
+public class VehiculeTest {
+  @Parameter(value = 0)//org.junit.runners.Parameterized.Parameter
+  public String immat;
+  @Parameter(value = 1)
+  public Boolean result;
+  //org.junit.runners.Parameterized.Parameters
+  @Parameters(name = "immat {0} est valide : {1}")
+  public static Collection&lt;Object[]&gt; data() {
+      return Arrays.asList(new Object[][]{
+        {"XXXXX", false}, {"AA-123-BB", true}
+      });
+  }
+
+  @Test
+  public void testCheckBadImmatriculation(){
+      //Given, When, Then
+      Assertions.assertThat(Vehicule.checkImmat(immat)).isEqualTo(result);
+  }</code></pre>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Cela évite de dumpliquer inutilement du code et facilite l'ajout de nouveaux tests.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite-unit-junit-ressources" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Ressources de test</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est fréquent de vouloir paramétrer notre application différement lorsque l'on est dans les tests que lorsqu'elle est lancée normalement. On peut créer un fichier <code>application.properties</code> dans le répertoire <code>src/test/resources</code> en y mettant les propriétés que l'on souhaite redéfinir.
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="sql">//src/test/resources/application.properties
+
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.url=jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+spring.datasource.username=sa
+spring.datasource.password=sa</code></pre>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Par exemple, on utilisera une BDD MySQL pour l'application et une BDD en mémoire éphémère pour les tests.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite-unit-junit-spring" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Tests avec Spring</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Lorsqu'on veut tester des classes gérées par Spring, il est nécessaire que le contexte Spring soit lancé en même temps que le test (pour que les annotations <code>@Autowired</code> fonctionnent).
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java">@RunWith(SpringRunner.class)
+@DataJpaTest
+public class VehiculeRepositoryTest {
+
+    @Autowired
+    VehiculeRepository vehiculeRepository;
+
+    @Test
+    public void testFindByImmat(){
+        //Given
+        Vehicule v = vehiculeRepository.save(new Vehicule("AA-123-BB"));
+        //When
+        Vehicule result = vehiculeRepository.findByImmat("AA-123-BB");
+        //Then
+        Assertions.assertThat(result).isEqualTo(v); 
+    }
+}</code></pre>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est nécessaire de limiter le plus possible les tests de ce type car ils sont plus longs que les tests unitaires classiques à cause du temps d'initialisation du contexte Spring. On pourra notamment utiliser les Mocks.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite-unit-junit-beforeafter" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Initialisation et Réinitialisation</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Lorsqu'on veut définir un contexte de test pour tous les tests d'une classe, on peut définir des méthodes permettant d'initialiser ou de réinitialiser ce contexte.
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java">public class ExempleTest {
+  @BeforeClass
+  public void setUp(){//Nom setUp arbitraire
+    //Appelé une seule fois avant l'exécution des tests
+  }
+  @Before
+  public void before(){//Nom before arbitraire
+    //Appelé avant chaque test
+  }
+  @After
+  public void after(){//Nom after arbitraire
+    //Appelé après chaque test
+  }
+  @AfterClass
+  public void tearDown(){//Nom tearDown arbitraire
+    //Appelé une fois que tous les tests sont passés
+  }
+}</code></pre>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ces méthodes peuvent être utiles pour vider la base de données ou définir un jeu de données communs à plusieurs tests. Une bonne pratique consiste à réinitialiser le contexte avant l'exécution du test (pour être sûr de ne pas récupérer de données de tests précédents). 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite-unit-junit-mock" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Mock</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Pour conserver le principe de test unitaire, il est nécessaire de ne pas dépendre de l'implémentation d'éventuelles dépendances de la classe testée. Pour cela, on utilise les <code>mocks</code> avec <strong>Mockito</strong> (inclus avec Spring) et <strong>PowerMock</strong>.
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java">@RunWith(MockitoJUnitRunner.class)
+public class VehiculeServiceTest {
+
+  @InjectMocks
+  private VehiculeService vehiculeService;
+  @Mock
+  private VehiculeRepository vehiculeRepository;
+
+  @Test(expected = EntityNotFoundException.class)
+  public void testFindByImmatNotFound(){
+    //Given
+    Mockito.when(vehiculeRepository.findByImmat("inconnu")).thenReturn(null);
+    //When
+    vehiculeService.findByImmat("inconnu");
+  }
+}</code></pre>
+          </div>
+          <div class="container-fluid little-top-margin">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ainsi, le vrai <code>vehiculeRepository</code> n'est jamais vraiment appelé, Mockito attrape l'appel et retourne un objet lui même. 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite-unit-junit-mock2" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Mock (2)</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est possible de <em>vérifier</em> des comportements sur les objets mockés.
+            </div>
+          </div>
+          <div class="container-fluid small-font text-left">
+            <pre><code class="java">@RunWith(MockitoJUnitRunner.class)
+public class VehiculeServiceTest {
+    @InjectMocks
+    public VehiculeService vehiculeService;
+    @Mock
+    public VehiculeRepository vehiculeRepository;
+    @Test
+    public void testAddProprietaire(){
+        //Given
+        Vehicule vehicule = new Vehicule("AA-123-BB");
+        Mockito.when(vehiculeRepository.findOne(Mockito.anyLong())).thenReturn(vehicule);
+        Mockito.when(vehiculeRepository.save(Mockito.any(Vehicule.class))).then(Mockito.returnsFirstArg());
+        //When addProprietaire(idVehicule, idProprietaire)
+        vehiculeService.addProprietaire(1L, 2L);
+        //Then
+        ArgumentCaptor&lt;Vehicule&gt; vehiculeCaptor = ArgumentCaptor.forClass(Vehicule.class);
+        Mockito.verify(vehiculeRepository, Mockito.times(1)).save(vehiculeCaptor.capture());
+        Assertions.assertThat(vehiculeCaptor.getValue().getProprietaireId()).isEqualTo(2L);
+    }
+}</code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On vérifie ici que le véhicule passé à la méthode <code>save</code> contient bien le <code>proprietaireId</code> et qu'il n'y a eu qu'un appel sans pour autant l'effectuer... 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite-integration" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Les tests d'intégration</h1>
@@ -454,7 +728,44 @@
       </div>
     </div>
 
-    <div id="fiabilite-metriques" class="step slide" data-nb="12" data-rel-x="2000" data-y="3300">
+    <div id="fiabilite-integration-junit" class="step slide">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les tests d'intégration avec JUnit</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les tests d'intégration sont des tests unitaires commes les autres si ce n'est qu'on n'introduit pas de mock. On appelle les vrais méthodes. Il y a donc généralement chargement du contexte Spring.
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java">@RunWith(SpringRunner.class)
+@SpringBootTest
+public class VehiculeServiceTest {
+
+    @Autowired
+    public VehiculeService vehiculeService;
+
+    @Test
+    public void test(){
+        //Given avec de vraies données d'entrées
+
+        //When avec appel des vraies méthodes de repository...
+        vehiculeService.test();
+
+        //Then avec de vraies vérifications...
+    }
+}</code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est préférable de tester le plus possible en test unitaire et de limiter les tests d'intégration à la validation de l'assemblage de l'ensemble des modules.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fiabilite-metriques" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Métriques</h1>
@@ -482,7 +793,7 @@
       </div>
     </div>
 
-    <div id="capacite" class="step slide" data-nb="13" data-x="0" data-y="4400">
+    <div id="capacite" class="step slide" data-x="0">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Capacité fonctionnelle</h1>
@@ -508,7 +819,7 @@
       </div>
     </div>
 
-    <div id="capacite-acceptation" class="step slide" data-nb="14" data-rel-x="2000" data-y="4400">
+    <div id="capacite-acceptation" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Les tests d'acceptation</h1>
@@ -544,7 +855,7 @@
       </div>
     </div>
 
-    <div id="capacite-interface" class="step slide" data-nb="15" data-rel-x="2000" data-y="4400">
+    <div id="capacite-interface" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Les tests d'interface</h1>
@@ -578,7 +889,7 @@
       </div>
     </div>
 
-    <div id="capacite-manuel" class="step slide" data-nb="16" data-rel-x="2000" data-y="4400">
+    <div id="capacite-manuel" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Les tests manuels</h1>
@@ -611,7 +922,7 @@
       </div>
     </div>
 
-    <div id="capacite-metriques" class="step slide" data-nb="17" data-rel-x="2000" data-y="4400">
+    <div id="capacite-metriques" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Métriques</h1>
@@ -637,7 +948,7 @@
       </div>
     </div>
 
-    <div id="performances" class="step slide" data-nb="18" data-x="0" data-y="5500">
+    <div id="performances" class="step slide" data-x="0">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Performances</h1>
@@ -661,7 +972,7 @@
       </div>
     </div>
 
-    <div id="performances-charges" class="step slide" data-nb="19" data-rel-x="2000" data-y="5500">
+    <div id="performances-charges" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Les tests de charge</h1>
@@ -695,7 +1006,7 @@
       </div>
     </div>
 
-    <div id="performances-metriques" class="step slide" data-nb="20" data-rel-x="2000" data-y="5500">
+    <div id="performances-metriques" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Métriques</h1>
@@ -723,7 +1034,7 @@
       </div>
     </div>
 
-    <div id="maintenabilite" class="step slide" data-nb="21" data-x="0" data-y="6600">
+    <div id="maintenabilite" class="step slide" data-x="0">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Maintenabilité</h1>
@@ -750,7 +1061,7 @@
       </div>
     </div>
 
-    <div id="maintenabilite-journalisation" class="step slide" data-nb="22" data-rel-x="2000" data-y="6600">
+    <div id="maintenabilite-journalisation" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Journalisation</h1>
@@ -777,7 +1088,7 @@
       </div>
     </div>
 
-    <div id="maintenabilite-documentation" class="step slide" data-nb="23" data-rel-x="2000" data-y="6600">
+    <div id="maintenabilite-documentation" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Documentation</h1>
@@ -815,7 +1126,7 @@ public class HelloWorld
       </div>
     </div>
 
-    <div id="maintenabilite-documentation-projet" class="step slide" data-nb="24" data-rel-x="2000" data-y="6600">
+    <div id="maintenabilite-documentationprojet" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Documentation projet</h1>
@@ -840,7 +1151,7 @@ public class HelloWorld
       </div>
     </div>
 
-    <div id="maintenabilite-dev" class="step slide" data-nb="25" data-rel-x="2000" data-y="6600">
+    <div id="maintenabilite-dev" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Développements spécifiques</h1>
@@ -868,7 +1179,7 @@ public class HelloWorld
       </div>
     </div>
 
-    <div id="maintenabilite-livraison" class="step slide" data-nb="26" data-rel-x="2000" data-y="6600">
+    <div id="maintenabilite-livraison" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Livraisons</h1>
@@ -889,7 +1200,7 @@ public class HelloWorld
       </div>
     </div>
 
-    <div id="maintenabilite-metriques" class="step slide" data-nb="27" data-rel-x="2000" data-y="6600">
+    <div id="maintenabilite-metriques" class="step slide">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text-center">
           <h1 class="display-3">Métriques</h1>
@@ -920,8 +1231,8 @@ public class HelloWorld
 <script src="js/jquery.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-4-navbar.js"></script>
 <script src="js/highlight.min.js"></script>
 <script src="js/moment.min.js"></script>
-<script src="js/jquery.mousewheel.min.js"></script>
 <script src="js/script.js"></script>
 

@@ -6,6 +6,11 @@
     height: 75vh;
     overflow: scroll;
 }
+
+.jumbotron {
+    background-color: #fff !important;
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1281px) {
    nav.navbar {
     padding: 0 5px 0 5px;
