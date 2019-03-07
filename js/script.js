@@ -80,7 +80,7 @@ $("div.step.slide").each(function(index, el) {
   var xOffset = 2000;
   var ybase = 1100;
   var xbase = 0; 
-  if(id !== 'accueil'){
+  if(id !== 'accueil' && id !== 'conclusion'){
     if(id.indexOf("-") > 0){
       if(id.lastIndexOf("-") != id.indexOf("-")){
         if(id.split("-").length == 4){
