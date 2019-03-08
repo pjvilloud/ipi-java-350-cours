@@ -1,3 +1,4 @@
+$.noConflict();
 
 hljs.initHighlightingOnLoad();
 var nbSlides = $(".step.slide").length;
