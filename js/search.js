@@ -1,3 +1,4 @@
+var $ = jQuery.noConflict();
 
 var searchInput;
 var $content = $("#impress");
