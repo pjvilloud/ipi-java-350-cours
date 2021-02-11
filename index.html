@@ -1069,7 +1069,7 @@ public class VehiculeServiceTest {
         //Given
         Vehicule vehicule = new Vehicule("AA-123-BB");
         Mockito.when(vehiculeRepository.findOne(Mockito.anyLong())).thenReturn(vehicule);
-        Mockito.when(vehiculeRepository.save(Mockito.any(Vehicule.class))).then(Mockito.returnsFirstArg());
+        Mockito.when(vehiculeRepository.save(Mockito.any(Vehicule.class))).thenAnswer(AdditionalAnswers.returnsFirstArg());
         //When addProprietaire(idVehicule, idProprietaire)
         vehiculeService.addProprietaire(1L, 2L);
         //Then
